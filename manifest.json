@@ -1,0 +1,16 @@
+{
+  "name": "Casenglish Korean Hider",
+  "version": "1.0",
+  "description": "A chrome extension that hides Korean in Casenglish",
+  "content_scripts": [
+
+    {
+      "matches": [
+        "https://casenglish.com/webbook"
+      ],
+      "js": "/content-scripts/webbook.js",
+      "css": "/content-styles/webbook.css"
+    }
+  ],
+  "manifest_version": 2
+}
