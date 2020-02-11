@@ -1,8 +1,6 @@
 let isHidingKoreanEnabled = false;
 
-chrome.browserAction.onClicked.addListener(tab => {
-    console.log('clicked');
-
+function sendKoreanToggleMessage() {
     chrome.tabs.query({
         active: true,
         currentWindow: true
@@ -19,4 +17,13 @@ chrome.browserAction.onClicked.addListener(tab => {
             load: isHidingKoreanEnabled
         });
     });
+}
+
+// default
+sendKoreanToggleMessage();
+
+chrome.browserAction.onClicked.addListener(tab => {
+    console.log('clicked');
+
+    sendKoreanToggleMessage();
 });
