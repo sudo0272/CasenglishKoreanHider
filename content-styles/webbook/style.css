@@ -18,7 +18,8 @@
 #patterns-menu-post .post-menuitem-trs,
 #idioms-menu-post .post-menuitem-trs,
 .post-dialogue h3,
-#words {
+#patterns-posts #words,
+#idiom-posts #words {
   display: none;
 }
 
