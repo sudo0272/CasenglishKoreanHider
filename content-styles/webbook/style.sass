@@ -1,8 +1,24 @@
-$transition-time: .4s
+/*
+    Koreans in list of posts
+        before selecting:
+            patterns: #patterns-menu-init .post-menuitem-trs
+            idioms: #idioms-menu-init .post-menuitem-trs
 
-#patterns-menu-init .post-menuitem-trs
+        after selecting:
+            patterns: #patterns-menu-post .post-menuitem-trs
+            idioms: #idioms-menu-post .post-menuitem-trs
+
+    Koreans in dialogue
+        .post-dialogue h3
+
+    Korean above dialogue
+        #words
+ */
+
+#patterns-menu-init .post-menuitem-trs,
+#idioms-menu-init .post-menuitem-trs,
+#patterns-menu-post .post-menuitem-trs,
+#idioms-menu-post .post-menuitem-trs,
+.post-dialogue h3,
+#words
   display: none
-
-#idioms-menu-init .post-menuitem-trs
-  display: none
-

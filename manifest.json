@@ -8,12 +8,21 @@
         "https://casenglish.com/webbook"
       ],
       "js": [
-        "content-scripts/webbook.js"
+        "content-scripts/webbook/script.js",
+        "content-scripts/lib/loadCss.js",
+        "content-scripts/lib/unloadCss.js"
       ]
     }
   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
   "web_accessible_resources": [
-    "content-styles/webbook.css"
+    "content-styles/webbook/style.css"
   ],
+  "browser_action": {
+  },
   "manifest_version": 2
 }
