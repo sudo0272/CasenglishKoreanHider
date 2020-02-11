@@ -19,11 +19,17 @@ function sendKoreanToggleMessage() {
     });
 }
 
-// default
-sendKoreanToggleMessage();
+chrome.runtime.onMessage.addListener(message => {
+    switch (message.work) {
+        case 'created':
+            isHidingKoreanEnabled = false;
+            sendKoreanToggleMessage();
+
+            break;
+    }
+});
 
 chrome.browserAction.onClicked.addListener(tab => {
     console.log('clicked');
-
     sendKoreanToggleMessage();
 });
