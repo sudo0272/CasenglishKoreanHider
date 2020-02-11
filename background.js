@@ -1,4 +1,4 @@
-let isKoreanEnabled = false;
+let isHidingKoreanEnabled = false;
 
 chrome.browserAction.onClicked.addListener(tab => {
     console.log('clicked');
@@ -7,16 +7,16 @@ chrome.browserAction.onClicked.addListener(tab => {
         active: true,
         currentWindow: true
     }, tabs => {
-        if (isKoreanEnabled) {
-            isKoreanEnabled = false;
+        if (isHidingKoreanEnabled) {
+            isHidingKoreanEnabled = false;
         } else {
-            isKoreanEnabled = true;
+            isHidingKoreanEnabled = true;
         }
 
         chrome.tabs.sendMessage(tabs[0].id, {
             work: 'loadCss',
             css: 'content-styles/webbook/style.css',
-            load: isKoreanEnabled
+            load: isHidingKoreanEnabled
         });
     });
 });
